@@ -161,8 +161,12 @@
       </div>
 
       <!-- ======= End Formulario Section ======= -->
-      <div class="button-container">
+      <div class="buttonContainer" id="buttonContainer">
         <!-- Aquí se generan los botones -->
+      </div>
+
+      <div class="menuContainer" id="menuContainer">
+
       </div>
     
       <div id="selected-buttons-container" class="selected-button-container">
@@ -202,9 +206,8 @@
     var popupSelectedButtons = document.getElementById('popup-selected-buttons');
     var popupBuyButton = document.getElementById('popup-buy-button');
     var popupForm = document.getElementById('popup-form');
-
     // Generar botones
-    var buttonContainer = document.querySelector('.button-container');
+    var buttonContainer = document.querySelector('.buttonContainer');
     var selectedButtonContainer = document.querySelector('#selected-buttons');
 
     function handleButtonClick() {
@@ -279,7 +282,7 @@
       var mensajeCodificado = encodeURIComponent(mensajeWhatsapp);
 
       // Construir el enlace de WhatsApp con el mensaje
-      var enlaceWhatsapp = 'https://wa.me/528995077375/?text=' + mensajeCodificado;
+      var enlaceWhatsapp = 'https://wa.me/528994527900/?text=' + mensajeCodificado;
 
       // Redireccionar a WhatsApp
       window.location.href = enlaceWhatsapp;
@@ -290,10 +293,10 @@
 
     });
 
-    for (var i = 1; i <= 2500; i++) {
+    for (var i = 1; i <= 9900; i++) {
       var button = document.createElement('button');
       button.className = 'button';
-      button.textContent = i;
+      button.textContent = i.toString().padStart(4,'o');
       button.setAttribute('data-number', i);
       button.addEventListener('click', handleButtonClick);
       buttonContainer.appendChild(button);
